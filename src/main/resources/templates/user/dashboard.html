@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" th:replace="~{baseFragment :: parent(~{::.title}, ~{::#content})}"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title class="title">Dashboard page</title>
+</head>
+<body>
+<div id="content" class="custom">
+    <h1 class="text-center ">Dashboard page</h1>
+    <h3>
+        <span data-th-text="${username}"></span>
+        <h1>Your email is <span data-th-text="${username.email}"></span></h1>
+        <h1>Your name is <span data-th-text="${username.name}"></span></h1>
+    </h3>
+</div>
+</body>
+</html>

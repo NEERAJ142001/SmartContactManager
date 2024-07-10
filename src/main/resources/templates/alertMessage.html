@@ -1,0 +1,9 @@
+<div data-th-fragment="message"
+     data-th-if="${session.message}"
+     data-th-object="${session.message}"
+     data-th-classappend="*{'text-center font-semibold p-2  text-md text-'+type+'-800 rounded-lg bg-grey-500 dark:bg-white-800 dark:text-'+type+'-400'}"
+     role="alert">
+    <span  data-th-text="*{message}"></span>
+
+    <data-th-block data-th-text="${@sessionHelper.removeMessageInSession()}"></data-th-block>
+</div>
